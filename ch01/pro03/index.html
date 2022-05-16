@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">버튼</button>
+    <script>
+        function func1(){ };
+
+        var func2 = function(){ };
+
+        var func3 = (a) => { return a + 100 };
+        //파라미터 1개면 생략 가능
+        //한줄밖에 없으면 줄괄호, return 생략 가능
+        var func4 = a => a + 100;
+
+        [1,2,3,4].forEach(data => console.log(data));
+
+        document.getElementById('btn').addEventListener('click',  e => {
+            console.log(this); //window
+        });
+
+        var object = {
+            func1 : ()=>{
+                console.log(this); //window
+            }
+        }
+        object.func1();
+    </script>
+</body>
+</html>

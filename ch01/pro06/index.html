@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //func1(); // 1
+        //func2(); // error
+        function func1 (){
+            console.log(1);
+            //함수 전부가 호이스팅(맨위)로 올라감
+        }
+
+        var func2 = function(){
+            console.log(1);
+            //함수 선언만 위로 올라감
+        }
+
+        let a = 1;
+        var b = 2;
+        window.a = 3;
+        window.b = 4; // var 변수명 === window.변수명
+
+        console.log(a+b);
+
+        var i;
+
+        //setTimeout이 5번 실행된후 콜백함수가 5번 실행될때 var이 이미 5이므로 오류가 남
+        for (var i = 0; i < 5; i++) {
+            setTimeout(function() { console.log(i); }, i*1000 ); 
+        }
+    </script>
+</body>
+</html>
