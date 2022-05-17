@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //obj: 오브젝트의 obj
+    var obj = {name : 'kim'};
+    
+    function changeObj(obj){
+      //obj의 주소값을 복사한 값을 파라미터변수로 받았으므로 obj의 값은 변경되지 않음
+      //obj : 파라미터변수의 obj, 지역변수를 수정하것이지 전역변수를 수정한 것은 아님
+      obj = {name : 'park'};
+    }
+    changeObj(obj);
+  </script>
+</body>
+</html>

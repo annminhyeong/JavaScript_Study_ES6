@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //문제1
+    // var 학생1 = { name : 'Kim', age : 20 }
+    // var 학생2 = { name : 'Park', age : 21 }
+    // var 학생3 = { name : 'Lee', age : 22 }
+
+    // function Student(name, age){
+    //   this.name = name;
+    //   this.age = age;
+    //   this.sayHi = function(){
+    //     console.log(`안녕 나는 ${this.name}이야`);
+    //   }
+    // }
+    
+    //문제2
+    // function Parent(){
+    //   this.name = 'Kim';
+    // }
+    // var a = new Parent();
+
+    // a.__proto__.name = 'Park';
+    // console.log(a.name);
+    
+    //문제3
+    // function Student(이름, 나이){
+    // this.name = 이름;
+    // this.age = 나이;
+    // }
+
+    // Student.prototype.sayHi = () => {
+    //   console.log('안녕 나는 ' + this.name + '이야');
+    // }
+    // var 학생1 = new Student('Kim', 20);
+
+    // 학생1.sayHi(); //왜 이 코드가 제대로 안나오죠?
+    //allow funciton을 사용해서
+
+    //문제4
+    var arr = [1,2,3];
+    Array.prototype.remove3 = function(){
+      for(var i=0; i<this.length; i++){
+        if(this[i] === 3){
+          this.splice(i,1);
+        }
+      }
+    }
+    arr.remove3();
+
+    console.log(arr);
+  </script>
+</body>
+</html>

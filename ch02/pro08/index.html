@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //상속기능 (es5)
+    // Object.create(상속받을 부모 object);
+    // var 부모 = {name : 'kim', age : 25};
+    // var 자식 = Object.create(부모);
+    // var 손자 = Object.create(자식);
+
+    //상속기능 (es6)
+    class 부모 {
+      constructor(a){
+        this.name = a;
+        //자식이 함수를 직접 가짐
+        this.sayHi1 = ()=> console.log('say hi');
+      }
+      //부모.prototype에 함수가 추가됨
+      sayHi2() {
+        console.log('say hi');
+      }
+
+      sayHello() {
+        console.log('say hello');
+      }
+    }
+    var 자식 = new 부모('a');
+    자식.__proto__;
+    Object.getPrototypeOf(자식);
+
+  </script>
+</body>
+</html>

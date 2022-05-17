@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class 할아버지{
+      constructor(lastname, fullname){
+        this.firtname = 'kim';
+        this.lastname = lastname;
+        this.fullname = fullname;
+      }
+      sayHi(){
+        console.log('say hi grandfather');
+      }
+    }
+
+    var 할아버지1 = new 할아버지('super');
+    console.log(할아버지1);
+
+    class 아버지 extends 할아버지{
+      constructor(lastname, fullname){
+        super(lastname, fullname); // 할아버지의 constructor 중괄호 안에 값을 가져옴 (암기)
+        this.age = 50;
+      }
+      sayHi(){
+        console.log('say hi father');
+        //아래 super는 부모프로토타입을 의미(암기)
+        super.sayHi();
+      }
+    }
+
+    var 아버지1 = new 아버지('kong');
+    console.log(아버지1);
+  </script>
+</body>
+</html>

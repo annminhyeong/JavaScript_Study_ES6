@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //문제1
+    // var a = [1,2,3];
+    // var b = '김밥';
+    // var c = [...b, ...a];
+    // console.log(c);
+
+    //문제2
+    // var a = [1,2,3];
+    // var b = ['you', 'are'];
+    // var c = function(a, b){
+    //   console.log([[...a], ...[...b]][1]);
+    // }
+    // c(a,b);
+    
+    //문제3
+    // function func(a=5, b=a*2){
+    //   console.log(a+b);
+    //   return 10;
+    // }
+    // func(3);
+  
+    //문제4
+    // function func(a=5, b= a * 2){
+    //   console.log(a+b);
+    // }
+    // func(undefined, undefined);
+    
+    //문제5
+    // function 어레이(...rest){
+    //   return [...rest];
+    // }
+    // var newArray = 어레이(1,2,3,4,5);
+    // console.log(newArray);
+
+    //문제6
+    // var numbers = [2,3,4,1,6,32,746,3451,23,13];
+    // console.log(Math.max(...numbers));
+
+    //문제7
+    // function 정렬([...rest]){
+    //   console.log(...rest.sort());
+    // }
+    // 정렬('bear');
+    
+
+    //문제8
+    // 글자세기('aabccc');
+    // function 글자세기(rest){
+    //   var result = {};
+    //   [...rest].forEach((item)=>{
+    //     if(result[item] > 0 ){
+    //       result[item] = result[item] + 1;
+    //     }else{
+    //       result[item] = 1;
+    //     }
+    //   });
+    //   console.log(result);
+    // }
+  </script>
+</body>
+</html>

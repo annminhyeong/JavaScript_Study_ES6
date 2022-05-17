@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // var 사람 = {
+    //   name : 'park',
+    //   age : 25,
+    //   //getter, return 필수, 파라미터 없음
+    //   get nextAge(){
+    //     return this.age + 1;
+    //   },
+    //   //setter, 파라미터 1개이상
+    //   set setAge(age){
+    //     this.age = age;
+    //   }
+    // }
+    // 사람.setAge = '20';
+    // 사람.nextAge;
+
+    class 사람{
+      constructor(){
+        this.name = 'park';
+        this.age = 25;
+      }
+      get nextAge(){
+        return this.age + 1;
+      }
+      set setAge(age){
+        this.age = age;
+      }
+    }
+    var 사람1 = new 사람();
+  </script>
+</body>
+</html>

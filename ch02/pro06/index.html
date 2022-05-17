@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Obj(name , age){
+      this.name = name;
+      this.age = age;
+      this.func = function(){
+        console.log(`안녕 ${this.name} 아`);
+      }
+    }
+    //객체를 생성하면 prototype이 생성됨(유전자)
+    //prototype은 자식에게만 물려줄 변수,메서드를 생성, 내자신은 제외
+    Obj.prototype.gender = '남자';
+
+    var obj1 = new Obj('kim',22);
+    var obj2 = new Obj('ann',12);
+
+    var 부모 = {name : 'kim'}
+    var 자식 = {};
+    자식.__proto__ = 부모;
+    
+  </script>
+</body>
+</html>

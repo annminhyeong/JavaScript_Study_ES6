@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Student(name){
+      //대문자 함수는 객체생성 함수이다.
+      //객체변수를 만들려면 this.변수명을 사용해서 변수를 선언
+      this.name = name;
+      this.age = 25;
+      //메서드를 만들려면 this.메서드명을 사용하여 메서드를 선언
+      this.sayHi = function(){
+        console.log('안녕');
+      }
+    }
+
+    var student1 = new Student('lee');
+    var student2 = new Student('park');
+    console.log(student1);
+    console.log(student2);
+  </script>
+</body>
+</html>
