@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class 부모{
+
+    }
+    부모.prototype.name = 'park'
+
+    var obj = new 부모()
+    Object.getOwnPropertyDescriptor(obj, 'name');
+    for(var key in obj){
+      if(obj.hasOwnProperty(key)){
+          console.log(key, obj[key]);
+      }
+    }
+    
+    var arr = [1,2,3];
+
+    for(var item of 'arr'){
+      console.log(item);
+    }
+
+    arr[Symbol.iterator]();
+  </script>
+</body>
+</html>

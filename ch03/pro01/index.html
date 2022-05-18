@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [2, 3, 4];
+      // var a = arr[0];
+      // var b = arr[1];
+
+      //변수생성
+      var [a, b, c = 10] = [2, 3];
+
+      var obj = { name: "kim", age: 25 };
+      // var name = obj.name;
+      // var age = obj.age;
+
+      //변수명을 키값과 일치시켜야함
+      var { name : changeName = 'park', age = 31 } = { name: "kim", age: 25 };
+      console.log(changeName);
+
+      var name = 'kim';
+      var age = 25;
+
+      //변수를 오브젝트에 넣을때 축약해서 쓸 수 있음
+      var obj = {name : name, age : age};
+      var obj = {name, age};
+
+      function func({name, age}, [arr1, arr2]){
+        console.log(name, age);
+        console.log(arr1, arr2);
+      }
+      func({name : 'kim', age : 23}, [3,2]);
+
+      let 신체정보 = {
+        body: {
+          height: 190,
+          weight: 70
+        },
+        size: ["상의 Large", "바지 30인치"],
+      };
+
+      var {body : { height, weight}, size : [상의, 하의]} = 신체정보;
+      </script>
+  </body>
+</html>

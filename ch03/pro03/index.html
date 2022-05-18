@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 스택에서 실행 1
+    //console.log(1);
+    //setTimeout 함수는 비동기 함수여서 대기실(web api)로 이동
+    // 대기실(web api) -> 큐 - > 스택안이 비어있으면 스택으로 이동 -> 스택에서 실행 3
+    //setTimeout(()=> console.log(2), 1000);
+    // 스택에서 실행 2
+    //console.log(3); 
+
+
+    // function firstFunc1(){
+    //   console.log('first func');
+    // }
+
+    // function secondFunc1(){
+    //   console.log('second func');
+    // }
+
+    // firstFunc 함수를 실행시킨 다음 secondFunc 함수를 실행시키고 싶을때
+    // 첫번째함수 실행사이에 이벤트리스너가 발생하면 순차적으로 실행이 안될수 있음. 
+    // firstFunc1();
+    // secondFunc1();
+
+    
+    //콜백함수 : 순차적으로 실행시키고 싶을때 쓰는 함수
+    //해결법 : 콜백함수 쓰기
+    // function firstFunc2(secondFunc2){
+    //   console.log('first func');
+    //   secondFunc2();
+    // }
+
+    // function secondFunc2(){
+    //   console.log('second func');
+    // }
+    // firstFunc2(secondFunc2);
+
+
+  </script>
+</body>
+</html>

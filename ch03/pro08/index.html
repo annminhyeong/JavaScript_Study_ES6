@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // var 심볼 = Symbol('설명');
+    // var weight = Symbol('내 시크릿 몸무게');
+    // var height = Symbol('비밀키');
+    // var person = {
+    //   name : 'kim',
+    //   [age] : 25
+    // }
+    // person.weight = 200;
+    // person[weight] = 100; //반복문에서 출력이 안됨
+    // person[height] = '160cm';
+    // console.log(person);
+
+    // for(var key in person){
+    //   console.log(person[key]);
+    // }
+
+    var a = Symbol('설명1');
+    var b = Symbol('설명1');
+    console.log(a === b); // false
+
+    //전역 심볼 만들기
+    var c = Symbol.for('설명2');
+    var d = Symbol.for('설명2');
+    console.log(c === d); // true
+
+    var arr = [1,2,3];
+    //js가 기본적으로 집어넣는 Symbol
+    console.log(arr[Symbol.iterator]());
+  </script>
+</body>
+</html>

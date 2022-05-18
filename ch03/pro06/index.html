@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="chk">버튼</button>
+  <script>
+    function plus1(callback){
+      console.log('1 + 1');
+      callback(2);
+    }
+    plus1(function(result){
+      console.log(result);
+    });
+
+    async function plus2(){
+      var promise = new Promise(function(resolve, reject){
+        var 힘든연산 = 1 + 1;
+        resolve(힘든연산);
+      });
+      try{
+        var result = await promise;
+        console.log(result);
+      }catch{
+        console.log('에러')
+      }
+
+
+      // promise.then(function(){
+      //   console.log('성공');
+      // });
+
+    }
+
+    // plus2().then(function(result){
+    //   console.log(result);
+    // });
+    async function afunc(){
+      var clickPromise = new Promise(function(resolve, reject){
+        document.getElementById('chk').addEventListener('click', function(){
+          resolve('성공했음');
+        })
+      });
+      var result = await clickPromise;
+      console.log(result);
+    }
+    afunc();
+  </script>
+</body>
+</html>

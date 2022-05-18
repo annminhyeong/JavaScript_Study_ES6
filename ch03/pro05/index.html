@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <img id="test" src="https://codingapple1.github.io/kona.jpg">
+  <script>
+    //문제1
+    // var imgLoad = new Promise(function(resolve, reject){
+    //   var img = document.querySelector('#test');
+
+    //   img.addEventListener('load', function(){
+    //     resolve();
+    //   });
+
+    //   img.addEventListener('error', function(){
+    //     reject();
+    //   });
+    // });
+
+    // imgLoad.then(function(){
+    //   console.log('로딩성공');
+    // }).catch(function(){
+    //   console.log('로딩실패');
+    // });
+
+    //문제2
+    var promise = new Promise(function(resolve, reject){
+      $.ajax({
+        type : 'get',
+        url : 'https://codingapple1.github.io/hello.txt'
+      }).done((result)=>{
+        resolve(result);
+      });
+    });
+
+    promise.then((result)=>{
+      console.log(result);
+      function then2(resolve, reject){
+      $.ajax({
+        type : 'get',
+        url : 'https://codingapple1.github.io/hello2.txt'
+      }).done((result)=>{
+        resolve(result);
+      });
+    }
+      return new Promise(then2);
+    }).then((result)=>{
+      console.log(result);
+    })
+
+
+
+
+
+  </script>
+</body>
+</html>

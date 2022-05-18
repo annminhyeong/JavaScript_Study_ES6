@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Map 자료형
+    // var person = new Map();
+    // person.set('name', 'kim');
+    // person.set('age', 20);
+    // person.set(100, '백');
+    // person.set([1,2,3], '어레이모음');
+
+
+    // var person1 = new Map([
+    //   ['name', 'kim'],
+    //   ['age', 20],
+    //   [100, '백'],
+    //   [[1,2,3], '어레이모음']
+    // ]);
+
+    // person.get(100)
+    // console.log(person.get(100));
+
+    // person.delete(100)
+    // console.log(person.get(100));
+  
+    // console.log(person.size);
+
+    // for(var data of person.keys()){
+    //   console.log(data);
+    // }
+
+    // for(var data of person1.values()){
+    //   console.log(data);
+    // }
+    
+    //set 자료형
+    var 출석부1 = ['join', 'tom', 'any', 'tom'];
+    var 출석부2 = new Set(['join', 'tom', 'any', 'tom']);
+    //추가
+    출석부2.add('yasuo');
+    //삭제
+    출석부2.delete('yasuo');
+    //확인
+    출석부2.has('tom');
+    //사이즈
+    출석부2.size;
+
+    //set을 array로 바꾸기
+    var 출석부3 = [...출석부2];
+    console.log(출석부1);
+    console.log(출석부2);
+
+  </script>
+</body>
+</html>

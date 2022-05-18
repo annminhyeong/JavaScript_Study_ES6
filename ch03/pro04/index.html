@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Promise 사용법
+    var 프로미스 = new Promise(function(resolve, reject){
+      setTimeout(()=>{
+        var 어려운연산 = 1 + 1;
+        var 성공결과 = 2;
+  
+        //성공 판정 내리기
+        resolve(성공결과);
+      }, 1000);
+      //실패 판정 내리기
+      // reject();
+    });
+
+    프로미스.then(function(성공결과){
+      console.log(성공결과);
+    }).then(function(){
+
+    }).catch(function(){
+      //실행이 실패할 경우 실행
+    }).finally(function(){
+      //성공하든 실패하든 실행
+    });
+
+  </script>
+</body>
+</html>

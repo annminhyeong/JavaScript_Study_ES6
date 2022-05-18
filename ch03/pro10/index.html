@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <custom-input name="비번"></custom-input>
+  <script>
+    class 클래스 extends HTMLElement{
+      //커스텀 html 태그 만들기
+      connectedCallback(){
+
+        //Html 태그 만들기
+        // let label = document.createElement('label');
+        // this.append(label);
+
+        //커스텀html의 name 값 가져오기
+        let name = this.getAttribute('name');
+        this.innerHTML = `<label>${name}안녕하세요</label><input >`;
+      }
+
+      //name값이 바뀌는 것을 감지
+      static get observedAttributes(){
+        return ['name'];
+      }
+
+      //바뀔때마다 실행
+      attributeChangedCallback(){
+        console.log(this.getAttribute('name'));
+        let name = this.getAttribute('name');
+        this.innerHTML = `<label>${name}안녕하세요</label><input >`;
+      }
+    }
+    customElements.define('custom-input', 클래스);
+  </script>
+</body>
+</html>
